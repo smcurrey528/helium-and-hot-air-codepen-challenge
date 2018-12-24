@@ -1,0 +1,119 @@
+body {
+  background-color: lightblue;
+}
+.rope {
+  display:inline-block;
+   position:relative;
+  border-radius: 1px solid;
+  height: 150px;
+  width: 5px;
+  background:hsl(-90,50%,65%);
+  margin-left: 520px;
+  margin-top:-20px;
+  margin-bottom: -20px;
+  transition:transform 0.5s ease;
+  z-index:10;
+  animation:balloon 4s ease-in-out infinite;
+
+}
+
+#second {
+  margin-left: -100px !important;
+}
+.cloud {
+  display:inline-block;
+   width:400px;
+  height:100px;
+  background: white;
+  border-radius:80%;
+  position:relative;
+  box-shadow:inset -10px -10px 0 rgba(0,100,0,0.07);
+  transition:transform 0.5s ease;
+  animation:cloud 4s ease-in-out infinite;
+
+}
+
+.girl {
+  display:inline-block;
+  background-image: url('https://i.imgur.com/EnISzVP.png');
+  border-radius: 50%;
+  position:relative;
+  background-size: auto 100%;
+  width: 88px;
+  height: 125px;
+  transition:transform 0.5s ease;
+  z-index:10;
+  animation:balloon 4s ease-in-out infinite;
+  margin-bottom: -20px;
+}
+
+@keyframes cloud {
+  0%,100%{ transform:translateX(0) rotate(-4deg); }
+  50%{ transform:translateX(-105px) rotate(2deg); }
+}
+
+.balloon {
+  display:inline-block;
+   width:350px;
+  height:395px;
+  background:hsl(300,50%,65%);
+  border-radius:80%;
+  position:relative;
+  box-shadow:inset -10px -10px 0 rgba(0,100,0,0.07);
+  margin:0px 300px;
+  transition:transform 0.5s ease;
+  z-index:10;
+  animation:balloon 4s ease-in-out infinite;
+  transform-origin:bottom center;
+}
+
+
+@keyframes balloon {
+  0%,100%{ transform:translateY(0) rotate(-4deg); }
+  50%{ transform:translateY(-25px) rotate(4deg); }
+}
+
+#two {
+  margin-left:750px;
+}
+
+.balloon:before {
+  font-size:20px;
+  color:hsl(300,30%,50%);
+  display:block;
+  text-align:center;
+  width:100%;
+  position:absolute;
+  bottom:-12px;
+  z-index:-100;
+}
+
+.balloon:after {
+ display:inline-block; top:200px;
+  position:absolute;
+  height:200px;
+  width:5px;
+  margin-left:400 auto;
+  background:rgba(0,0,0,0.2);
+}
+
+.basket {
+  display:inline-block;
+   width:150px;
+  height:100px;
+  background:hsl(30,50%,65%);
+  position:relative;
+  box-shadow:inset -10px -10px 0 rgba(0,100,0,0.07);
+  margin:10px 400px;
+  transition:transform 0.5s ease;
+  z-index:10;
+  animation:balloon 4s ease-in-out infinite;
+  transform-origin:bottom center;
+}
+
+.bird {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells.svg);
+  background-size: auto 100%;
+  width: 88px;
+  height: 125px;
+}
